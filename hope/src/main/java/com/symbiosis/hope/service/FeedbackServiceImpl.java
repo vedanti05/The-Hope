@@ -17,8 +17,6 @@ public class FeedbackServiceImpl implements FeedbackService{
 	@Qualifier ("feedRepo")
 	private FeedbackRepository feedRepo;
 	
-	
-	
 	@Override
 	public Feedback insertrecord(Feedback r) {
 		// TODO Auto-generated method stub
