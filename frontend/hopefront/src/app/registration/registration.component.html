@@ -1,0 +1,64 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3">
+            <h3 class="page-header">
+            Signs your mental health might need attention
+        </h3>
+                <ul class="list-group">
+                    <li class="list-group-item">Feeling sad or down</li>
+                    <li class="list-group-item">Inability to concentrate</li>
+                    <li class="list-group-item">Extreme feelings of guilt</li>
+                    <li class="list-group-item">Excessive anger, hostility or violence</li>
+                    <li class="list-group-item">Sudden changes in behavior</li>
+                    <li class="list-group-item">Major changes in eating habits</li>
+                    <li class="list-group-item">Suicidal thoughts</li>
+                    <li class="list-group-item">Low on energy</li>
+                  </ul>
+                  
+        </div>
+        <div class="col-sm-9">
+            <h1 class="text-center">Register Here</h1>
+            <form (ngSubmit)="submitdata()">
+                <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" class="form-control" id="name" name="name" [(ngModel)]="reg.name">
+                </div>
+                <div class="form-group">
+                  <label for="address">Address:</label>
+                  <input type="text" class="form-control" id="address" name="address" [(ngModel)]="reg.address">
+                </div>
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <select class="form-control" id="city" name="city" [(ngModel)]="reg.city">
+                    <option value="">--select--</option>
+                    <option>Satara</option>    
+                    <option>Pune</option>   
+                    <option>Mumbai</option>   
+                    <option>Kolhapur</option>
+                    <option>Other</option>   
+                    </select>
+                  </div>
+                  <label>Gender:</label>
+                  <label class="radio-inline">
+                    <input type="radio" name="gender" value="Male" [(ngModel)]="reg.gender">Male</label>
+                    <label class="radio-inline"><input type="radio" name="gender" value="Female" [(ngModel)]="reg.gender">Female</label>
+                    <label class="radio-inline"><input type="radio" name="gender" value="Other" [(ngModel)]="reg.gender">Other</label>
+                    
+                    <div class="form-group">
+                        <label for="contact">Contact:</label>
+                        <input type="tel" class="form-control" id="contact" name="contact" [(ngModel)]="reg.contact">
+                      </div>
+                      <div class="form-group">
+                        <label for="emailid">Email address:</label>
+                        <input type="emailid" class="form-control" id="emailid" name="emailid" [(ngModel)]="reg.emailid">
+                      </div>
+                      <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password" name="password" [(ngModel)]="reg.password">
+                      </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </div>
+</div>
