@@ -9,28 +9,29 @@ import jakarta.persistence.Id;
 public class Adminlogin {
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
-private int adminloginid;
-private String username,password;
+private int admid;
+private String email,password;
+
 public Adminlogin() {
 	super();
 	// TODO Auto-generated constructor stub
 }
-public Adminlogin(String username, String password) {
+public Adminlogin(String email, String password) {
 	super();
-	this.username = username;
+	this.email = email;
 	this.password = password;
 }
-public int getAdminloginid() {
-	return adminloginid;
+public int getAdmid() {
+	return admid;
 }
-public void setAdminloginid(int adminloginid) {
-	this.adminloginid = adminloginid;
+public void setAdmid(int admid) {
+	this.admid = admid;
 }
-public String getUsername() {
-	return username;
+public String getEmail() {
+	return email;
 }
-public void setUsername(String username) {
-	this.username = username;
+public void setEmail(String email) {
+	this.email = email;
 }
 public String getPassword() {
 	return password;
@@ -40,7 +41,6 @@ public void setPassword(String password) {
 }
 @Override
 public String toString() {
-	return "Adminlogin [adminloginid=" + adminloginid + ", username=" + username + ", password=" + password + "]";
+	return "Adminlogin [admid=" + admid + ", email=" + email + ", password=" + password + "]";
 }
-
 }

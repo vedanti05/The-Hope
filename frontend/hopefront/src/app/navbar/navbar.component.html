@@ -8,11 +8,12 @@
         </button>
         <a class="navbar-brand" routerLink="/">Hope</a>
       </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
+      <div [ngSwitch]="menutype">
+      <div class="collapse navbar-collapse" id="myNavbar" *ngSwitchCase="'guest'">
         <ul class="nav navbar-nav">
           <li class="active"><a routerLink="/">Home</a></li>
           <li><a routerLink="/aboutus">AboutUs</a></li>
-          <li><a routerLink="/feedback">Feedback</a></li>
+          <li><a routerLink="/viewfeedback">View Feedback</a></li>
           <li><a routerLink="/contactus">ContactUs</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -20,6 +21,39 @@
           <li><a routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
           <li><a routerLink="/adminlogin"><span class="glyphicon glyphicon-log-in"></span> AdminLogin</a></li>
         </ul>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar" *ngSwitchCase="'user'">
+        <ul class="nav navbar-nav">
+          <li class="active"><a routerLink="/">Home</a></li>
+          <li><a routerLink="/aboutus">AboutUs</a></li>
+          <li><a routerLink="/feedback">Feedback</a></li>
+          <li><a routerLink="/consultant">Consultant</a></li>
+          <li><a routerLink="/media">Media</a></li>
+          <li><a routerLink="/helpline">Helpline</a></li>
+          <li><a routerLink="/appointment">Appointment</a></li>
+          <li><a routerLink="/contactus">ContactUs</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+         
+          <li><a (click)="logout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+ 
+        </ul>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar" *ngSwitchCase="'admin'">
+        <ul class="nav navbar-nav">
+          <li class="active"><a routerLink="/">Home</a></li>
+          <li><a routerLink="/manageconsultant">Manage Consultant</a></li>
+          <li><a routerLink="/viewfeedback">View Feedback</a></li>
+          <li><a routerLink="/managemedia">Media Management</a></li>
+          <li><a routerLink="/viewappointment">View Appointment</a></li>
+          <li><a routerLink="/viewregistration">View Registration</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+         
+          <li><a (click)="alogout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+ 
+        </ul>
+      </div>
       </div>
     </div>
   </nav>

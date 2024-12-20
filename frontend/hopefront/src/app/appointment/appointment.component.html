@@ -1,1 +1,67 @@
-<p>appointment works!</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3">
+            <h3 class="page-header">
+            Signs your mental health might need attention
+        </h3>
+                <ul class="list-group">
+                    <li class="list-group-item">Feeling sad or down</li>
+                    <li class="list-group-item">Inability to concentrate</li>
+                    <li class="list-group-item">Extreme feelings of guilt</li>
+                    <li class="list-group-item">Excessive anger, hostility or violence</li>
+                    <li class="list-group-item">Sudden changes in behavior</li>
+                    <li class="list-group-item">Major changes in eating habits</li>
+                    <li class="list-group-item">Suicidal thoughts</li>
+                    <li class="list-group-item">Low on energy</li>
+                  </ul>
+                  
+        </div>
+        <div class="col-sm-9">
+            <h1 class="text-center">Book Appointment</h1>
+            <form (ngSubmit)="submitdata()">
+                
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" class="form-control" id="username" name="name" [(ngModel)]="ap.username">
+                  </div>
+                
+                  <div class="form-group">
+                    <label for="emailid">Email Id:</label>
+                    <input type="emailid" class="form-control" id="emailid" name="emailid" [(ngModel)]="ap.emailid">
+                  </div>
+
+                    <div class="form-group">
+                        <label for="contact">Contact:</label>
+                        <input type="tel" class="form-control" id="contact" name="contact" [(ngModel)]="ap.contact">
+                      </div>
+                      
+                      <div class="form-group">
+                        <label class="control-label" for="date">Preferred Date</label>
+                        <input id="date" name="date" type="text" placeholder="Preferred Date" class="form-control input-md" [(ngModel)]="ap.apdate" >
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="time">Preferred Time</label>
+                        <select id="time" name="time" class="form-control" [(ngModel)]="ap.aptime" >
+                            <option value="8:00 to 9:00">8:00 to 9:00</option>
+                            <option value="10:00 to 01:00">10:00 to 01:00</option>
+                            <option value="02:00 to 04:00">02:00 to 04:00</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="appointmentStatus" class="form-label">Status</label>
+                        <select class="form-select" id="appointmentStatus" [(ngModel)]="ap.status" >
+                          <option value="pending">Pending</option>
+                          <option value="confirmed">Confirmed</option>
+                          <option value="rescheduled">Rescheduled</option>
+                          <option value="cancelled">Cancelled</option>
+                        </select>
+                      </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </div>
+</div>
+

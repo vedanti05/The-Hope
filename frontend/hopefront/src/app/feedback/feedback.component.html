@@ -1,1 +1,30 @@
-<p>feedback works!</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3">
+            <h3 class="page-header">
+            Signs your mental health might need attention
+        </h3>
+                <ul class="list-group">
+                    <li class="list-group-item">Feeling sad or down</li>
+                    <li class="list-group-item">Inability to concentrate</li>
+                    <li class="list-group-item">Extreme feelings of guilt</li>
+                    <li class="list-group-item">Excessive anger, hostility or violence</li>
+                    <li class="list-group-item">Sudden changes in behavior</li>
+                    <li class="list-group-item">Major changes in eating habits</li>
+                    <li class="list-group-item">Suicidal thoughts</li>
+                    <li class="list-group-item">Low on energy</li>
+                  </ul>
+        </div>
+        <div class="col-sm-9">
+            <h1 class="text-center">Valuable Feedback</h1>
+            <form (ngSubmit)="submitdata()">
+                
+                <div class="form-group">
+                  <label for="message">Message:</label>
+                  <textarea class="form-control" id="message" name="message" [(ngModel)]="fd.message" placeholder="Enter Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </div>
+</div>
