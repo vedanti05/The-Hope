@@ -1,1 +1,29 @@
-<p>view-appointment works!</p>
+<div class="container">
+    <h1 class="text-center"> Booked Appointments </h1>
+    <br>
+    <br>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Email-Id</th>
+                <th>Contact</th>
+                <th>Appointment Date</th>
+                <th>Appointment Time</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ap of aparr">
+                <td>{{ap.apid}}</td>
+                <td>{{ap.username}}</td>
+                <td>{{ap.emailid}}</td>
+                <td>{{ap.contact}}</td>
+                <td>{{ap.apdate}}</td>
+                <td>{{ap.aptime}}</td>
+                <td>{{ap.status}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

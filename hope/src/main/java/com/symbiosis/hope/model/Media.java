@@ -1,8 +1,6 @@
 package com.symbiosis.hope.model;
 
 
-
-	
 import java.util.Set;
 
 import jakarta.persistence.CascadeType;
@@ -20,7 +18,7 @@ import jakarta.persistence.ManyToMany;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
-	private String medianame,duration,fees;
+	private String medianame;
 
 	@ManyToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
 	@JoinTable(name="media_images",joinColumns= {
@@ -33,8 +31,6 @@ import jakarta.persistence.ManyToMany;
 	private Set<ImageModel> mediaImages;
 	
 
-
-
 	public Set<ImageModel> getMediaImages() {
 		return mediaImages;
 	}
@@ -45,11 +41,9 @@ import jakarta.persistence.ManyToMany;
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Media(String medianame, String duration, String fees) {
+	public Media(String medianame) {
 		super();
 		this.medianame = medianame;
-		this.duration = duration;
-		this.fees = fees;
 		
 	}
 	public long getId() {
@@ -63,18 +57,6 @@ import jakarta.persistence.ManyToMany;
 	}
 	public void setCoursename(String medianame) {
 		this.medianame = medianame;
-	}
-	public String getDuration() {
-		return duration;
-	}
-	public void setDuration(String duration) {
-		this.duration = duration;
-	}
-	public String getFees() {
-		return fees;
-	}
-	public void setFees(String fees) {
-		this.fees = fees;
 	}
 
 

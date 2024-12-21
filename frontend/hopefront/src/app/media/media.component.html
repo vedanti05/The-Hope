@@ -1,1 +1,12 @@
-<p>media works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let m of medias">
+            <div class="thumbnail">
+                <img src="http://localhost:8080/project/downloadFile/{{m.mediaImages}}">
+                <div class="caption">
+                    <h3>Media Name: {{m.medianame}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -31,6 +31,7 @@ export const routes: Routes = [
     {path:'manageconsultant',component:ManageConsultantComponent},
     {path:'viewfeedback',component:ViewFeedbackComponent},
     {path:'viewregistration',component:ViewRegistrationComponent},
-    {path:'mediamanagement',component:MediaManagementComponent},
+    {path:'managemedia',component:MediaManagementComponent},
     {path:'viewappointment',component:ViewAppointmentComponent}
+    
 ];

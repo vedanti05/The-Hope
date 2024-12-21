@@ -13,7 +13,7 @@ export class AppointmentService {
       {
         return this.http.post<Appointment>(this.serverurl+"/addappointment",apo)
       }
-      getallfeedback():Observable<Appointment[]>
+      getallappointment():Observable<Appointment[]>
       {
         return this.http.get<Appointment[]>(this.serverurl+"/appointments")
       }
